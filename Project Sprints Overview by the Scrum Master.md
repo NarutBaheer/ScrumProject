@@ -49,5 +49,3 @@ Welcome to the repository for our Advanced Banking System project. This project 
 ## Conclusion
 This repository documents the development process of the Advanced Banking System, detailing the agile sprints, reviews, and tasks completed. We aim to deliver a secure and user-friendly banking system that meets the needs of our users. Your feedback and contributions are welcome as we refine and enhance the functionalities of this system.
 
-## Link to meetings 
-Below are the links for our scheduled meetings:
