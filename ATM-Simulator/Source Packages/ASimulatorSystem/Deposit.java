@@ -1,3 +1,4 @@
+
 package ASimulatorSystem;
 
 import java.awt.*;
@@ -14,10 +15,10 @@ public class Deposit extends JFrame implements ActionListener{
     Deposit(String pin){
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
+        Image i2 = i1.getImage().getScaledInstance(1000, 700, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l3 = new JLabel(i3);
-        l3.setBounds(0, 0, 960, 1080);
+        l3.setBounds(0, 0, 960, 700);
         add(l3);
         
         l1 = new JLabel("ENTER AMOUNT YOU WANT TO DEPOSIT");
@@ -32,24 +33,24 @@ public class Deposit extends JFrame implements ActionListener{
         
         setLayout(null);
         
-        l1.setBounds(190,350,400,35);
+        l1.setBounds(190,150,400,35);
         l3.add(l1);
         
-        t1.setBounds(190,420,320,25);
+        t1.setBounds(190,185,320,25);
         l3.add(t1);
         
-        b1.setBounds(390,588,150,35);
+        b1.setBounds(270,320,150,35);
         l3.add(b1);
         
-        b2.setBounds(390,633,150,35);
+        b2.setBounds(270, 360,150,35);
         l3.add(b2);
         
         b1.addActionListener(this);
         b2.addActionListener(this);
         
-        setSize(960,1080);
+        setSize(960,800);
         setUndecorated(true);
-        setLocation(500,0);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
     
@@ -63,7 +64,7 @@ public class Deposit extends JFrame implements ActionListener{
                 }else{
                     Conn c1 = new Conn();
                     c1.s.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Deposit', '"+amount+"')");
-                    JOptionPane.showMessageDialog(null, "Rs. "+amount+" Deposited Successfully");
+                    JOptionPane.showMessageDialog(null, "$. "+amount+" Deposited Successfully");
                     setVisible(false);
                     new Transactions(pin).setVisible(true);
                 }
