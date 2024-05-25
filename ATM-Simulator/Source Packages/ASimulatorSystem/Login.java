@@ -79,7 +79,7 @@ public class Login extends JFrame implements ActionListener{
         getContentPane().setBackground(Color.WHITE);
         
         setSize(800,480);
-        setLocation(550,200);
+        setLocationRelativeTo(null);
         setVisible(true);
         
     }
@@ -87,9 +87,9 @@ public class Login extends JFrame implements ActionListener{
         try{        
             if(ae.getSource()==b1){
                 Conn c1 = new Conn();
-                String cardno  = tf1.getText();
+                String cardnumber  = tf1.getText();
                 String pin  = pf2.getText();
-                String q  = "select * from login where cardno = '"+cardno+"' and pin = '"+pin+"'";
+                String q  = "select * from login where cardnumber = '"+cardnumber+"' and pin = '"+pin+"'";
 
                 ResultSet rs = c1.s.executeQuery(q);
                 if(rs.next()){
