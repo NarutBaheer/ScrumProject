@@ -13,10 +13,10 @@ public class Transactions extends JFrame implements ActionListener{
     Transactions(String pin){
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
+        Image i2 = i1.getImage().getScaledInstance(1000, 700, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l2 = new JLabel(i3);
-        l2.setBounds(0, 0, 960, 1080);
+        l2.setBounds(0, 0, 960, 700);
         add(l2);
         
         l1 = new JLabel("Please Select Your Transaction");
@@ -34,28 +34,28 @@ public class Transactions extends JFrame implements ActionListener{
         
         setLayout(null);
         
-        l1.setBounds(235,400,700,35);
+        l1.setBounds(190,150,700,35);
         l2.add(l1);
         
-        b1.setBounds(170,499,150,35);
+        b1.setBounds(170,200,150,35);
         l2.add(b1);
         
-        b2.setBounds(390,499,150,35);
+        b2.setBounds(390,200,150,35);
         l2.add(b2);
         
-        b3.setBounds(170,543,150,35);
+        b3.setBounds(170,250,150,35);
         l2.add(b3);
         
-        b4.setBounds(390,543,150,35);
+        b4.setBounds(390,250,150,35);
         l2.add(b4);
         
-        b5.setBounds(170,588,150,35);
+        b5.setBounds(170,300,150,35);
         l2.add(b5);
         
-        b6.setBounds(390,588,150,35);
+        b6.setBounds(390,300,150,35);
         l2.add(b6);
         
-        b7.setBounds(390,633,150,35);
+        b7.setBounds(390,350,150,35);
         l2.add(b7);
         
         
@@ -68,8 +68,8 @@ public class Transactions extends JFrame implements ActionListener{
         b7.addActionListener(this);
         
         
-        setSize(960,1080);
-        setLocation(500,0);
+        setSize(960,800);
+        setLocationRelativeTo(null);
         setUndecorated(true);
         setVisible(true);
         
