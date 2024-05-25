@@ -19,7 +19,7 @@ public class Signup2 extends JFrame implements ActionListener{
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l14 = new JLabel(i3);
-        l14.setBounds(150, 0, 100, 100);
+        l14.setBounds(20, 0, 100, 100);
         add(l14);
         
         
@@ -93,7 +93,7 @@ public class Signup2 extends JFrame implements ActionListener{
         r4.setBackground(Color.WHITE);
         
         
-        String religion[] = {"Hindu","Muslim","Sikh","Christian","Other"};
+        String religion[] = {"Muslim","Hindu","Sikh","Christian","Other", "None"};
         c1 = new JComboBox(religion);
         c1.setBackground(Color.WHITE);
         c1.setFont(new Font("Raleway", Font.BOLD, 14));
@@ -194,7 +194,7 @@ public class Signup2 extends JFrame implements ActionListener{
         r4.setBounds(460,540,100,30);
         add(r4);
         
-        b.setBounds(570,640,100,30);
+        b.setBounds(570,610,100,30);
         add(b);
         
         b.addActionListener(this);
@@ -202,7 +202,7 @@ public class Signup2 extends JFrame implements ActionListener{
         getContentPane().setBackground(Color.WHITE);
         
         setSize(850,750);
-        setLocation(500,120);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
     
@@ -257,3 +257,4 @@ public class Signup2 extends JFrame implements ActionListener{
         new Signup2("").setVisible(true);
     }
 }
+
