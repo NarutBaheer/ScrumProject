@@ -1,3 +1,4 @@
+
 package ASimulatorSystem;
 
 import java.awt.*;
@@ -21,7 +22,7 @@ public class Signup3 extends JFrame implements ActionListener{
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l14 = new JLabel(i3);
-        l14.setBounds(150, 0, 100, 100);
+        l14.setBounds(20, 0, 100, 100);
         add(l14);
         
         l1 = new JLabel("Page 3: Account Details");
@@ -130,80 +131,80 @@ public class Signup3 extends JFrame implements ActionListener{
         l12.setBounds(770,10,40,30);
         add(l12);
         
-        l1.setBounds(280,40,400,40);
+        l1.setBounds(280,20,400,40);
         add(l1); 
         
-        l2.setBounds(100,140,200,30);
+        l2.setBounds(100,100,200,30);
         add(l2);
         
-        r1.setBounds(100,180,150,30);
+        r1.setBounds(100,125,150,30);
         add(r1);
         
-        r2.setBounds(350,180,300,30);
+        r2.setBounds(350,125,300,30);
         add(r2);
         
-        r3.setBounds(100,220,250,30);
+        r3.setBounds(100,150,250,30);
         add(r3);
         
-        r4.setBounds(350,220,250,30);
+        r4.setBounds(350,150,250,30);
         add(r4);
         
-        l3.setBounds(100,300,200,30);
+        l3.setBounds(100,180,200,30);
         add(l3);
         
-        l4.setBounds(330,300,250,30);
+        l4.setBounds(350,180,200,30);
         add(l4);
         
-        l5.setBounds(100,330,200,20);
+        l5.setBounds(100,200,200,20);
         add(l5);
         
-        l6.setBounds(330,330,500,20);
+        l6.setBounds(350,200,500,20);
         add(l6);
         
-        l7.setBounds(100,370,200,30);
+        l7.setBounds(100,220,200,30);
         add(l7);
         
-        l8.setBounds(330,370,200,30);
+        l8.setBounds(330,220,200,30);
         add(l8);
         
-        l9.setBounds(100,400,200,20);
+        l9.setBounds(100,240,200,20);
         add(l9);
         
-        l10.setBounds(100,450,200,30);
+        l10.setBounds(100,260,200,30);
         add(l10);
         
-        c1.setBounds(100,500,200,30);
+        c1.setBounds(100,280,200,30);
         add(c1);
         
-        c2.setBounds(350,500,200,30);
+        c2.setBounds(350,280,200,30);
         add(c2);
         
-        c3.setBounds(100,550,200,30);
+        c3.setBounds(100,310,200,30);
         add(c3);
         
-        c4.setBounds(350,550,200,30);
+        c4.setBounds(350,310,200,30);
         add(c4);
         
-        c5.setBounds(100,600,200,30);
+        c5.setBounds(100,340,200,30);
         add(c5);
         
-        c6.setBounds(350,600,200,30);
+        c6.setBounds(350,340,200,30);
         add(c6);
         
-        c7.setBounds(100,680,600,20);
+        c7.setBounds(100,370,600,20);
         add(c7);
         
-        b1.setBounds(250,720,100,30);
+        b1.setBounds(250,420,100,30);
         add(b1);
         
-        b2.setBounds(420,720,100,30);
+        b2.setBounds(420,420,100,30);
         add(b2);
         
         
         getContentPane().setBackground(Color.WHITE);
         
-        setSize(850,850);
-        setLocation(500,120);
+        setSize(850,680);
+        setLocationRelativeTo(null);
         setVisible(true);
         
         b1.addActionListener(this);
@@ -284,3 +285,5 @@ public class Signup3 extends JFrame implements ActionListener{
     }
     
 }
+
+
