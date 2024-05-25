@@ -18,7 +18,7 @@ public class MiniStatement extends JFrame implements ActionListener{
         l1 = new JLabel();
         add(l1);
         
-        JLabel l2 = new JLabel("Indian Bank");
+        JLabel l2 = new JLabel("AUAF Bank");
         l2.setBounds(150, 20, 100, 20);
         add(l2);
         
@@ -50,7 +50,7 @@ public class MiniStatement extends JFrame implements ActionListener{
                     balance -= Integer.parseInt(rs.getString("amount"));
                 }
             }
-            l4.setText("Your total Balance is Rs "+balance);
+            l4.setText("Your total Balance is $ "+balance);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -73,3 +73,4 @@ public class MiniStatement extends JFrame implements ActionListener{
     }
     
 }
+
