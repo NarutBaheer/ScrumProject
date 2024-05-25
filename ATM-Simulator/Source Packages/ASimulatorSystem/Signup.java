@@ -144,88 +144,88 @@ public class Signup extends JFrame implements ActionListener{
         l1.setBounds(140,20,600,40);
         add(l1);
         
-        l2.setBounds(290,80,600,30);
+        l2.setBounds(290,70,600,30);
         add(l2);
         
-        l3.setBounds(100,140,100,30);
+        l3.setBounds(100,130,100,30);
         add(l3);
         
-        t1.setBounds(300,140,400,30);
+        t1.setBounds(300,130,400,30);
         add(t1);
         
-        l4.setBounds(100,190,200,30);
+        l4.setBounds(100,180,200,30);
         add(l4);
         
-        t2.setBounds(300,190,400,30);
+        t2.setBounds(300,180,400,30);
         add(t2);
         
-        l5.setBounds(100,240,200,30);
+        l5.setBounds(100,230,200,30);
         add(l5);
         
-        dateChooser.setBounds(300, 240, 400, 30);
+        dateChooser.setBounds(300, 230, 400, 30);
         
-        l6.setBounds(100,290,200,30);
+        l6.setBounds(100,280,200,30);
         add(l6);
         
-        r1.setBounds(300,290,60,30);
+        r1.setBounds(300,280,60,30);
         add(r1);
         
-        r2.setBounds(450,290,90,30);
+        r2.setBounds(450,280,90,30);
         add(r2);
         
-        l7.setBounds(100,340,200,30);
+        l7.setBounds(100,330,200,30);
         add(l7);
         
-        t3.setBounds(300,340,400,30);
+        t3.setBounds(300,330,400,30);
         add(t3);
         
-        l8.setBounds(100,390,200,30);
+        l8.setBounds(100,380,200,30);
         add(l8);
         
-        r3.setBounds(300,390,100,30);
+        r3.setBounds(300,380,100,30);
         add(r3);
         
-        r4.setBounds(450,390,100,30);
+        r4.setBounds(450,380,100,30);
         add(r4);
         
-        r5.setBounds(635,390,100,30);
+        r5.setBounds(635,380,100,30);
         add(r5);
         
         
         
-        l9.setBounds(100,440,200,30);
+        l9.setBounds(100,430,200,30);
         add(l9);
         
-        t4.setBounds(300,440,400,30);
+        t4.setBounds(300,430,400,30);
         add(t4);
         
-        l10.setBounds(100,490,200,30);
+        l10.setBounds(100,480,200,30);
         add(l10);
         
-        t5.setBounds(300,490,400,30);
+        t5.setBounds(300,480,400,30);
         add(t5);
         
-        l11.setBounds(100,540,200,30);
+        l11.setBounds(100,530,200,30);
         add(l11);
         
-        t6.setBounds(300,540,400,30);
+        t6.setBounds(300,530,400,30);
         add(t6);
         
-        l12.setBounds(100,590,200,30);
+        l12.setBounds(100,580,200,30);
         add(l12);
         
-        t7.setBounds(300,590,400,30);
+        t7.setBounds(300,580,400,30);
         add(t7);
         
-        b.setBounds(620,660,80,30);
+        b.setBounds(620,620,80,30);
         add(b);
         
         b.addActionListener(this); 
         
         getContentPane().setBackground(Color.WHITE);
         
-        setSize(850,800);
-        setLocation(500,120);
+        setSize(850,700);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
     
@@ -282,3 +282,4 @@ public class Signup extends JFrame implements ActionListener{
         new Signup().setVisible(true);
     }
 }
+
