@@ -16,48 +16,48 @@ public class FastCash extends JFrame implements ActionListener {
     FastCash(String pin) {
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
+        Image i2 = i1.getImage().getScaledInstance(1000, 700, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l3 = new JLabel(i3);
-        l3.setBounds(0, 0, 960, 1080);
+        l3.setBounds(0, 0, 960, 700);
         add(l3);
 
         l1 = new JLabel("SELECT WITHDRAWL AMOUNT");
         l1.setForeground(Color.WHITE);
         l1.setFont(new Font("System", Font.BOLD, 16));
 
-        b1 = new JButton("Rs 100");
-        b2 = new JButton("Rs 500");
-        b3 = new JButton("Rs 1000");
-        b4 = new JButton("Rs 2000");
-        b5 = new JButton("Rs 5000");
-        b6 = new JButton("Rs 10000");
+        b1 = new JButton("$ 100");
+        b2 = new JButton("$ 500");
+        b3 = new JButton("$ 1000");
+        b4 = new JButton("$ 2000");
+        b5 = new JButton("$ 5000");
+        b6 = new JButton("$ 10000");
         b7 = new JButton("BACK");
 
         setLayout(null);
 
-        l1.setBounds(235, 400, 700, 35);
+        l1.setBounds(190,150, 700, 35);
         l3.add(l1);
 
-        b1.setBounds(170, 499, 150, 35);
+        b1.setBounds(170, 200, 150, 35);
         l3.add(b1);
 
-        b2.setBounds(390, 499, 150, 35);
+        b2.setBounds(390, 200, 150, 35);
         l3.add(b2);
 
-        b3.setBounds(170, 543, 150, 35);
+        b3.setBounds(170, 250, 150, 35);
         l3.add(b3);
 
-        b4.setBounds(390, 543, 150, 35);
+        b4.setBounds(390, 250, 150, 35);
         l3.add(b4);
 
-        b5.setBounds(170, 588, 150, 35);
+        b5.setBounds(170, 300, 150, 35);
         l3.add(b5);
 
-        b6.setBounds(390, 588, 150, 35);
+        b6.setBounds(390, 300, 150, 35);
         l3.add(b6);
 
-        b7.setBounds(390, 633, 150, 35);
+        b7.setBounds(390, 350, 150, 35);
         l3.add(b7);
 
         b1.addActionListener(this);
@@ -68,8 +68,8 @@ public class FastCash extends JFrame implements ActionListener {
         b6.addActionListener(this);
         b7.addActionListener(this);
 
-        setSize(960, 1080);
-        setLocation(500, 0);
+        setSize(960, 800);
+        setLocationRelativeTo(null);
         setUndecorated(true);
         setVisible(true);
 
@@ -82,7 +82,7 @@ public class FastCash extends JFrame implements ActionListener {
             ResultSet rs = c.s.executeQuery("select * from bank where pin = '"+pin+"'");
             int balance = 0;
             while (rs.next()) {
-                if (rs.getString("mode").equals("Deposit")) {
+                if (rs.getString("type").equals("Deposit")) {
                     balance += Integer.parseInt(rs.getString("amount"));
                 } else {
                     balance -= Integer.parseInt(rs.getString("amount"));
@@ -99,7 +99,7 @@ public class FastCash extends JFrame implements ActionListener {
             }else{
                 Date date = new Date();
                 c.s.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Withdrawl', '"+amount+"')");
-                JOptionPane.showMessageDialog(null, "Rs. "+amount+" Debited Successfully");
+                JOptionPane.showMessageDialog(null, "$ "+amount+" Debited Successfully");
                     
                 setVisible(false);
                 new Transactions(pin).setVisible(true);
@@ -114,3 +114,4 @@ public class FastCash extends JFrame implements ActionListener {
         new FastCash("").setVisible(true);
     }
 }
+
